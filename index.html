@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Summit Tech 2026 - O evento que conecta inovação, talentos e possibilidades reais de crescimento. Dias 22, 23 e 24 de maio no Anfiteatro da Unimar - Marília/SP">
+        content="TI EM CONEXÃO ECOSSISTEMA TECH 2ª EDIÇÃO - O evento que conecta inovação, talentos e possibilidades reais de crescimento. Dias 22, 23 e 24 de maio no Anfiteatro da Unimar - Marília/SP">
     <meta name="keywords"
-        content="Summit Tech 2026, tecnologia, inovação, hackathon, startup, Marília, Unimar, evento tech">
-    <meta name="author" content="Summit Tech 2026">
-    <meta property="og:title" content="Summit Tech 2026">
+        content="TI EM CONEXÃO ECOSSISTEMA TECH 2ª EDIÇÃO, tecnologia, inovação, hackathon, startup, Marília, Unimar, evento tech">
+    <meta name="author" content="TI EM CONEXÃO ECOSSISTEMA TECH 2ª EDIÇÃO">
+    <meta property="og:title" content="TI EM CONEXÃO ECOSSISTEMA TECH 2ª EDIÇÃO">
     <meta property="og:description"
         content="O evento que conecta inovação, talentos e possibilidades reais de crescimento.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <title>Summit Tech 2026 | Inovação, Talentos e Crescimento</title>
+    <title>TI EM CONEXÃO ECOSSISTEMA TECH 2ª EDIÇÃO | Inovação, Talentos e Crescimento</title>
     <link rel="icon" href="assets/Favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,6 +67,40 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+        }
+
+        body.no-scroll {
+            overflow: hidden;
+        }
+
+        /* ============================================
+           SCROLLBAR CUSTOMIZATION (Desktop)
+           ============================================ */
+        @media (min-width: 1024px) {
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: var(--bg-primary);
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: var(--accent-blue);
+                border: 2px solid var(--bg-primary);
+                border-radius: 10px;
+                transition: background 0.3s;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: var(--accent-blue-light);
+            }
+
+            /* Firefox support */
+            * {
+                scrollbar-width: thin;
+                scrollbar-color: var(--accent-blue) var(--bg-primary);
+            }
         }
 
         /* ============================================
@@ -866,7 +900,7 @@
            ============================================ */
         .benefits__grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
 
@@ -1304,14 +1338,16 @@
                 top: 0;
                 left: 0;
                 right: 0;
-                bottom: 0;
-                background: rgba(5, 10, 26, 0.95);
-                backdrop-filter: blur(20px);
+                height: 100vh;
+                height: 100dvh;
+                background: #050a1a;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 gap: 28px;
-                z-index: 999;
+                z-index: 2000;
+                padding: 40px 24px;
+                overflow-y: auto;
             }
 
             .nav__links.open {
@@ -1324,7 +1360,7 @@
 
             .nav__hamburger {
                 display: flex;
-                z-index: 1001;
+                z-index: 2001;
             }
 
             .hero {
@@ -1400,8 +1436,8 @@
     <!-- Navigation -->
     <nav class="nav" id="nav" role="navigation" aria-label="Navegação principal">
         <div class="nav__inner">
-            <a href="#" class="nav__logo" aria-label="Summit Tech 2026">
-                <img src="assets/logoSummitTech.png" alt="Summit Tech 2026">
+            <a href="#" class="nav__logo" aria-label="TI EM CONEXÃO ECOSSISTEMA TECH 2ª EDIÇÃO">
+                <img src="assets/logoSummitTech.png" alt="TI EM CONEXÃO ECOSSISTEMA TECH 2ª EDIÇÃO">
             </a>
             <ul class="nav__links" id="navLinks">
                 <li><a href="#sobre">Sobre</a></li>
@@ -1427,8 +1463,8 @@
             </div>
 
             <h1 class="hero__title">
-                MARÍLIA<br>SUMMIT TECH<br>
-                <span class="hero__title__gradient">2026</span>
+                TI EM CONEXÃO<br>
+                <span class="hero__title__gradient">ECOSSISTEMA TECH 2ª EDIÇÃO</span>
             </h1>
 
             <p class="hero__subtitle">
@@ -1545,19 +1581,18 @@
                 <!-- Day 22 -->
                 <article class="program__card reveal reveal-delay-1">
                     <span class="program__card__date">
-                        📅 22 de Maio de 2026
-                        <span class="program__card__time">14h às 22h</span>
+                        📅 22 de Maio — Startup Day
+                        <span class="program__card__time">19h às 22h</span>
                     </span>
-                    <span class="program__card__partner">Parceiro: Sebrae for Startups</span>
-                    <h3 class="program__card__title">Startup Day</h3>
-                    <p class="program__card__target">Empreendedores, Startups e Profissionais de Negócios</p>
-                    <p class="program__card__desc">
-                        Um dia dedicado a quem busca inovar, validar ideias e evoluir com mais estratégia.
-                    </p>
+                    <span class="program__card__partner">Parceiro de conteúdo: Sebrae for Startups</span>
+                    <h3 class="program__card__title">Programação Detalhada</h3>
+                    <p class="program__card__target">Voltado para empreendedores, startups e profissionais de negócios.</p>
                     <ul class="program__card__list">
-                        <li>Painel sobre inovação acessível e estratégica</li>
-                        <li>Palestras com especialistas do mercado</li>
-                        <li>Networking com mentores e empreendedores</li>
+                        <li><strong>19h00</strong> - Credenciamento e Coffee Break</li>
+                        <li><strong>19h30</strong> - Abertura</li>
+                        <li><strong>20h00</strong> - Palestra com Elvis Fusco</li>
+                        <li><strong>21h00</strong> - Palestra: DNA Empreendedor: descubra o fundador em você, com José Madeira Netto (Sebrae)</li>
+                        <li><strong>22h00</strong> - Encerramento</li>
                     </ul>
                 </article>
 
@@ -1610,6 +1645,13 @@
                     </p>
                 </article>
                 <article class="benefit__card reveal reveal-delay-3">
+                    <div class="benefit__icon" aria-hidden="true">🤝</div>
+                    <h3 class="benefit__title">Conexões Estratégicas</h3>
+                    <p class="benefit__desc">
+                        Acesso a um ambiente qualificado para troca de experiências e geração de oportunidades.
+                    </p>
+                </article>
+                <article class="benefit__card reveal reveal-delay-4">
                     <div class="benefit__icon" aria-hidden="true">🛠️</div>
                     <h3 class="benefit__title">Execução Prática</h3>
                     <p class="benefit__desc">
@@ -1665,10 +1707,10 @@
     <section class="cta" id="inscricao" aria-labelledby="cta-title">
         <div class="container container--narrow">
             <div class="cta__card reveal">
-                <h2 class="cta__title" id="cta-title">Participe do<br>Summit Tech 2026</h2>
+                <h2 class="cta__title" id="cta-title">Participe do<br>TI EM CONEXÃO ECOSSISTEMA TECH 2ª EDIÇÃO</h2>
                 <p class="cta__text">
                     O mercado evolui rapidamente, e as melhores oportunidades surgem para quem está preparado e bem
-                    conectado. No Summit Tech você encontra o que precisa.
+                    conectado. No TI EM CONEXÃO ECOSSISTEMA TECH 2ª EDIÇÃO você encontra o que precisa.
                 </p>
 
                 <div class="cta__form" id="ctaForm">
@@ -1685,7 +1727,7 @@
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
-            <p class="footer__text">© 2026 Summit Tech — Todos os direitos reservados.</p>
+            <p class="footer__text">© 2026 TI EM CONEXÃO ECOSSISTEMA TECH 2ª EDIÇÃO — Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -1803,6 +1845,7 @@
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('open');
+            document.body.classList.toggle('no-scroll');
             const isExpanded = hamburger.classList.contains('active');
             hamburger.setAttribute('aria-expanded', isExpanded);
         });
@@ -1811,6 +1854,7 @@
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('open');
+                document.body.classList.remove('no-scroll');
                 hamburger.setAttribute('aria-expanded', 'false');
             });
         });
