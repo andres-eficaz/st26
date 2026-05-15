@@ -1410,6 +1410,123 @@
         }
 
         /* ============================================
+           LOGO SLIDER SECTION
+           ============================================ */
+        .logo-slider {
+            padding: 60px 0;
+            background: transparent;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-slider__container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .logo-slider__container::before,
+        .logo-slider__container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 150px;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .logo-slider__container::before {
+            left: 0;
+            background: linear-gradient(to right, var(--bg-primary), transparent);
+        }
+
+        .logo-slider__container::after {
+            right: 0;
+            background: linear-gradient(to left, var(--bg-primary), transparent);
+        }
+
+        .logo-slider__track {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            animation: scroll-left 40s linear infinite;
+        }
+
+        .logo-slider__group {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+            padding-right: 70px;
+        }
+
+        .logo-slider__item {
+            flex: 0 0 calc((1200px - (70px * 4)) / 5);
+            /* 5 logos desktop */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (min-width: 1200px) {
+            .logo-slider__item {
+                width: 184px;
+                flex: 0 0 184px;
+            }
+        }
+
+        .logo-slider__item img {
+            height: 128px;
+            width: auto;
+            object-fit: contain;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .logo-slider:hover .logo-slider__track {
+            animation-play-state: paused;
+        }
+
+        .logo-slider__item:hover img {
+            transform: scale(1.1);
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo-slider {
+                padding: 50px 0;
+            }
+
+            .logo-slider__group {
+                gap: 40px;
+                padding-right: 40px;
+            }
+
+            .logo-slider__item {
+                flex: 0 0 calc((100vw - 48px - (40px * 2)) / 3);
+                /* 3 logos mobile */
+            }
+
+            .logo-slider__item img {
+                height: 80px;
+            }
+
+            .logo-slider__container::before,
+            .logo-slider__container::after {
+                width: 70px;
+            }
+        }
+
+        /* ============================================
            RESPONSIVE
            ============================================ */
         @media (max-width: 1024px) {
@@ -1956,6 +2073,38 @@
                     <a href="https://www.sympla.com.br/evento/ti-em-conexao-ecossistema-tech-integracao-entre-universidade-e-mercado/3407432?referrer=app.clickup.com&referrer=app.clickup.com"
                         target="_blank" rel="noopener noreferrer" class="btn btn--primary speaker__cta">Garantir minha
                         vaga</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Slider Section -->
+    <section class="logo-slider">
+        <div class="container">
+            <div class="logo-slider__container">
+                <div class="logo-slider__track">
+                    <!-- Group 1 -->
+                    <div class="logo-slider__group">
+                        <div class="logo-slider__item"><img src="assets/logo 1.png" alt="Parceiro 1"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 2.png" alt="Parceiro 2"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 3.png" alt="Parceiro 3"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 4.png" alt="Parceiro 4"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 5.png" alt="Parceiro 5"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 6.png" alt="Parceiro 6"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 7.png" alt="Parceiro 7"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 8.png" alt="Parceiro 8"></div>
+                    </div>
+                    <!-- Group 2 (Duplicate for infinity) -->
+                    <div class="logo-slider__group">
+                        <div class="logo-slider__item"><img src="assets/logo 1.png" alt="Parceiro 1"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 2.png" alt="Parceiro 2"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 3.png" alt="Parceiro 3"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 4.png" alt="Parceiro 4"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 5.png" alt="Parceiro 5"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 6.png" alt="Parceiro 6"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 7.png" alt="Parceiro 7"></div>
+                        <div class="logo-slider__item"><img src="assets/logo 8.png" alt="Parceiro 8"></div>
+                    </div>
                 </div>
             </div>
         </div>
