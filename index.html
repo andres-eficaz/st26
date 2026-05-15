@@ -1399,6 +1399,11 @@
             line-height: 1.8;
         }
 
+        .speaker__cta {
+            align-self: flex-start;
+            margin-top: 10px;
+        }
+
         .speaker-header-section {
             padding-top: 100px;
             padding-bottom: 40px;
@@ -1504,6 +1509,53 @@
                 height: 44px;
             }
 
+            /* Program Section Mobile Adjustments */
+            .program__card__date {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px 24px;
+                border-radius: 20px;
+                width: 100%;
+                gap: 8px;
+                text-align: left;
+            }
+
+            .program__card__time {
+                display: block;
+                margin-top: 0;
+                font-size: 0.95rem;
+                color: var(--accent-cyan);
+                opacity: 1;
+            }
+
+            .program__card__list {
+                gap: 32px;
+            }
+
+            .program__card__list li {
+                display: block;
+                position: relative;
+                padding-left: 28px;
+                text-align: left;
+                font-size: 1rem;
+                line-height: 1.6;
+                color: var(--text-secondary);
+            }
+
+            .program__card__list li::before {
+                position: absolute;
+                left: 0;
+                top: 10px;
+            }
+
+            .program__card__list li strong {
+                display: block;
+                font-size: 1.2rem;
+                color: var(--text-primary);
+                margin-bottom: 4px;
+            }
+
             .speaker__grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -1512,11 +1564,6 @@
 
             .speaker-section:nth-of-type(even) .speaker__grid {
                 direction: ltr;
-            }
-
-            .speaker__image-container {
-                max-width: 320px;
-                margin: 0 auto;
             }
 
             .speaker__content {
@@ -1532,7 +1579,11 @@
 
             .speaker__image-container {
                 order: 2;
-                margin-bottom: 20px;
+                width: 100%;
+                max-width: 320px;
+                margin: 0 auto 20px;
+                display: block;
+                aspect-ratio: 1/1;
             }
 
             .speaker__role {
@@ -1545,6 +1596,13 @@
                 order: 4;
                 width: 100%;
                 text-align: center;
+            }
+
+            .speaker__cta {
+                order: 5;
+                width: 100%;
+                justify-content: center;
+                margin-top: 10px;
             }
 
             .speaker-header-section {
@@ -1589,7 +1647,8 @@
                 <li><a href="#mesa-redonda">Mesa Redonda</a></li>
                 <li><a href="#beneficios">Benefícios</a></li>
                 <li><a href="#parceiros">Parceiros</a></li>
-                <li><a href="#inscricao" class="nav__cta">Inscreva-se</a></li>
+                <li><a href="https://www.sympla.com.br/evento/ti-em-conexao-ecossistema-tech-integracao-entre-universidade-e-mercado/3407432?referrer=app.clickup.com&referrer=app.clickup.com"
+                        target="_blank" class="nav__cta">Inscreva-se</a></li>
             </ul>
             <button class="nav__hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
                 <span></span>
@@ -1638,7 +1697,8 @@
             </div>
 
             <div class="hero__actions">
-                <a href="#inscricao" class="btn btn--primary">Garantir minha vaga</a>
+                <a href="https://www.sympla.com.br/evento/ti-em-conexao-ecossistema-tech-integracao-entre-universidade-e-mercado/3407432?referrer=app.clickup.com&referrer=app.clickup.com"
+                    target="_blank" class="btn btn--primary">Garantir minha vaga</a>
                 <a href="#programacao" class="btn btn--secondary">Ver programação</a>
             </div>
         </div>
@@ -1664,7 +1724,8 @@
                     e descobrir novas oportunidades para a sua carreira.
                 </p>
                 <div class="highlight__cta">
-                    <a href="#inscricao" class="btn btn--primary">Garantir minha vaga</a>
+                    <a href="https://www.sympla.com.br/evento/ti-em-conexao-ecossistema-tech-integracao-entre-universidade-e-mercado/3407432?referrer=app.clickup.com&referrer=app.clickup.com"
+                        target="_blank" class="btn btn--primary">Garantir minha vaga</a>
                 </div>
             </div>
         </div>
@@ -1728,7 +1789,7 @@
                         <li><strong>19h00</strong> - Credenciamento e coffee break</li>
                         <li><strong>19h30</strong> - Abertura</li>
                         <li><strong>20h00</strong> - Mesa-redonda: Talentos em formação — como se destacar no mercado de
-                            T</li>
+                            TI</li>
                         <li><strong>21h00</strong> - Palestra Rudy Tedeschi - A Jornada da PEDBOT: Transformando
                             Tecnologia em Soluções Reais</li>
                         <li><strong>22h00</strong> - Encerramento</li>
@@ -1756,7 +1817,7 @@
         <div class="container">
             <div class="speaker__grid">
                 <div class="speaker__image-container">
-                    <img src="assets/wagner.png" alt="Wagner Peres" class="speaker__image" loading="lazy">
+                    <img src="assets/wagner.png" alt="Wagner Peres" class="speaker__image">
                 </div>
                 <div class="speaker__content">
                     <span class="speaker__role">Participante da Mesa Redonda</span>
@@ -1770,6 +1831,9 @@
                         América Latina, impulsionando o desenvolvimento de softwares que transformam o monitoramento em
                         tempo real e a gestão da segurança eletrônica.
                     </p>
+                    <a href="https://www.sympla.com.br/evento/ti-em-conexao-ecossistema-tech-integracao-entre-universidade-e-mercado/3407432?referrer=app.clickup.com&referrer=app.clickup.com"
+                        target="_blank" rel="noopener noreferrer" class="btn btn--primary speaker__cta">Garantir minha
+                        vaga</a>
                 </div>
             </div>
         </div>
@@ -1780,7 +1844,7 @@
         <div class="container">
             <div class="speaker__grid">
                 <div class="speaker__image-container">
-                    <img src="assets/rafael.png" alt="Rafael Lima" class="speaker__image" loading="lazy">
+                    <img src="assets/rafael.png" alt="Rafael Lima" class="speaker__image">
                 </div>
                 <div class="speaker__content">
                     <span class="speaker__role">Participante da Mesa Redonda</span>
@@ -1793,6 +1857,9 @@
                         Possui sólida experiência em tecnologia, com atuação em consultoria, automação comercial, ERP,
                         marketplaces e soluções digitais voltadas à transformação e crescimento de negócios.
                     </p>
+                    <a href="https://www.sympla.com.br/evento/ti-em-conexao-ecossistema-tech-integracao-entre-universidade-e-mercado/3407432?referrer=app.clickup.com&referrer=app.clickup.com"
+                        target="_blank" rel="noopener noreferrer" class="btn btn--primary speaker__cta">Garantir minha
+                        vaga</a>
                 </div>
             </div>
         </div>
@@ -1803,7 +1870,7 @@
         <div class="container">
             <div class="speaker__grid">
                 <div class="speaker__image-container">
-                    <img src="assets/caio.png" alt="Caio Saraiva Coneglian" class="speaker__image" loading="lazy">
+                    <img src="assets/caio.png" alt="Caio Saraiva Coneglian" class="speaker__image">
                 </div>
                 <div class="speaker__content">
                     <span class="speaker__role">Mediador da Mesa Redonda</span>
@@ -1817,6 +1884,9 @@
                         Computação e Ciência da Informação, com ênfase em Ciência de Dados, Inteligência Artificial,
                         Processamento de Linguagem Natural, Web Semântica, Banco de Dados e Repositórios Digitais.
                     </p>
+                    <a href="https://www.sympla.com.br/evento/ti-em-conexao-ecossistema-tech-integracao-entre-universidade-e-mercado/3407432?referrer=app.clickup.com&referrer=app.clickup.com"
+                        target="_blank" rel="noopener noreferrer" class="btn btn--primary speaker__cta">Garantir minha
+                        vaga</a>
                 </div>
             </div>
         </div>
@@ -1827,7 +1897,7 @@
         <div class="container">
             <div class="speaker__grid">
                 <div class="speaker__image-container">
-                    <img src="assets/neto.png" alt="José Madeira Netto" class="speaker__image" loading="lazy">
+                    <img src="assets/neto.png" alt="José Madeira Netto" class="speaker__image">
                 </div>
                 <div class="speaker__content">
                     <span class="speaker__role">Participante da Mesa Redonda</span>
@@ -1839,6 +1909,9 @@
                         startups e estudantes. Também participa da organização de programas e eventos voltados à
                         inovação, transformação digital e formação empreendedora.
                     </p>
+                    <a href="https://www.sympla.com.br/evento/ti-em-conexao-ecossistema-tech-integracao-entre-universidade-e-mercado/3407432?referrer=app.clickup.com&referrer=app.clickup.com"
+                        target="_blank" rel="noopener noreferrer" class="btn btn--primary speaker__cta">Garantir minha
+                        vaga</a>
                 </div>
             </div>
         </div>
@@ -1862,7 +1935,7 @@
         <div class="container">
             <div class="speaker__grid">
                 <div class="speaker__image-container">
-                    <img src="assets/rudy.png" alt="Rudy Tedeschi" class="speaker__image" loading="lazy">
+                    <img src="assets/rudy.png" alt="Rudy Tedeschi" class="speaker__image">
                 </div>
                 <div class="speaker__content">
                     <span class="speaker__role">Palestrante</span>
@@ -1880,6 +1953,9 @@
                         Sua missão é transformar problemas reais em tecnologia escalável, com impacto positivo na vida
                         das pessoas e no futuro da saúde digital.
                     </p>
+                    <a href="https://www.sympla.com.br/evento/ti-em-conexao-ecossistema-tech-integracao-entre-universidade-e-mercado/3407432?referrer=app.clickup.com&referrer=app.clickup.com"
+                        target="_blank" rel="noopener noreferrer" class="btn btn--primary speaker__cta">Garantir minha
+                        vaga</a>
                 </div>
             </div>
         </div>
@@ -1982,8 +2058,9 @@
                 </p>
 
                 <div class="cta__form" id="ctaForm">
-                    <a href="https://example.com" target="_blank" rel="noopener noreferrer"
-                        class="cta__form__submit">Inscreva-se gratuitamente</a>
+                    <a href="https://www.sympla.com.br/evento/ti-em-conexao-ecossistema-tech-integracao-entre-universidade-e-mercado/3407432?referrer=app.clickup.com&referrer=app.clickup.com"
+                        target="_blank" rel="noopener noreferrer" class="cta__form__submit">Inscreva-se
+                        gratuitamente</a>
                 </div>
 
                 <div class="cta__form__success" id="formSuccess" role="alert">
